@@ -1,19 +1,13 @@
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
 :root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-    --cor-de-fundo: #F5F5F5;
-    --cor-de-link: #000;
+    --color-de-fondo: #f5ee92;
+    --color-de-link: #000;
+    --color-de-boton: #2A7AE4;
+    --color-de-seccion: #F9B17D;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--color-de-fondo) ;
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
@@ -24,8 +18,9 @@ ol, ul,li {
 }
 a{
     text-decoration: none;
-    color: var(--cor-de-link);
+    color: var(--color-de-link);
 }
+
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
 
@@ -42,19 +37,59 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Menu*/
 
 section.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 8rem;
+}
 
+ul.menu__list{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
 }
 
 /*Sección Title*/
 
 section.title{
+    display: flex;
+    justify-content:center;
+    margin: 5rem 0;
+}
 
+.title__div{
+    width: 80vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.title__profile{
+    width: 30vw;
+}
+
+.title__bio{
+    font-size: 52px;
+    font-weight: bold;
+    width: 40vw;
+}
+
+.title__subsection{
+    font-size: 22px;
+}
+
+.title__network{
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding: 0;
 }
 
 /*Sección About*/
 
 section.about{
-
+    
 }
 
 /*Sección Hobbies*/
@@ -84,7 +119,7 @@ section.formcontato{
 /*footeer*/
 
 section.footer{
-   
+
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
@@ -120,12 +155,12 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Skills*/
 
 /*Hobbies*/
- 
+
 /*Formación Académica*/
 
 /*Experiencia Profesional*/
 
- /*Contacto*/
+/*Contacto*/
 
 /*Footer*/
 
