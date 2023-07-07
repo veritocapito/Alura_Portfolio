@@ -41,7 +41,8 @@ section.menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 8rem;
+    height: 10vh;
+    margin: 1rem 9rem;
 }
 
 ul.menu__list{
@@ -54,8 +55,9 @@ ul.menu__list{
 
 section.title{
     display: flex;
+    height: 85vh;
     justify-content:center;
-    margin: 5rem 0;
+    align-content: center;
 }
 
 .title__div{
@@ -102,8 +104,7 @@ section.hobbies, section.skills{
     text-align: center;
     width: 80%;
     margin: 0 auto;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
+    height: 60vh;
 }
 
 .hobbies__title, .skills__title{
@@ -127,9 +128,8 @@ section.hobbies, section.skills{
     min-width: 200px;
     height: 200px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 0;
-    gap: 2rem;
     border-radius: 5%;
     box-shadow: 8px 8px 5px 0px rgba(3, 26, 56, 0.4);
 }
@@ -142,7 +142,32 @@ section.hobbies, section.skills{
 /* Experiencia Académica*/
 
 section.academic{
+    text-align: center;
+    margin: 0 auto;
+    height: 80vh;
+    padding-top: 5rem;
+}
 
+.academic__courses{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+    gap: 1rem;
+}
+
+.academic__courses__box{
+    background-color: antiquewhite;
+    width: 20%;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.academic__courses__list{
+    padding: 0;
+}
+
+.academic__courses__item__img img{
+    border-radius: 10px;
 }
 
 /* experiencia*/
