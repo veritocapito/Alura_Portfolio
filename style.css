@@ -1,5 +1,5 @@
 :root{
-    --color-de-fondo: #f5ee92;
+    --color-de-fondo: #ffff;
     --color-de-link: #000;
     --color-de-boton: #2A7AE4;
     --color-de-seccion: #F9B17D;
@@ -8,7 +8,7 @@
 
 body {
     box-sizing: border-box;
-    background-color: var(--color-de-fondo) ;
+    background-color: var(--color-de-fondo);
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
@@ -83,7 +83,7 @@ section.title{
     display: flex;
     justify-content: flex-start;
     align-content: center;
-    gap: 3rem;
+    gap: 2rem;
     padding: 0;
 }
 
@@ -215,7 +215,8 @@ section.experience{
 
 .experience__img{
     max-width: 600px;
-    border-radius: 10px;
+    border-radius: 5px;
+    border: var(--color-de-boton) solid 1px;
 }
 
 .experience__description{
@@ -260,13 +261,101 @@ section.experience{
 
 section.contact{
     background-color: var(--color-de-fondo2) ;
+    height: 110vh;
+    padding-top: 5rem;
+}
+
+.contact__box{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact__left{
+    width: 40%;
+}
+
+.contact__img{
+    width: 500px;
+    margin: 2rem;
+    border-radius: 5px;
+}
+
+.contact__text{
+    width: 40%;
+    margin: 1rem 2rem;
+    text-align: left;
+}
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact__title{
+    padding: 0;
+}
+
+.contact__input{
+    border: none;
+    height: 45px;
+    outline-style: none;
+    border-radius: 5px;
+}
+
+.contact__input::placeholder{
+    font-family: 'Raleway';
+}
+
+.contact__textarea {
+    resize: none;
+    border: none;
+    outline-style: none;
+    border-bottom: var(--color-de-boton) ;
+    border-radius: 5px;
+}
+
+.contact__textarea::placeholder{
+    font-family: 'Raleway';
+    padding-top: 10px;
+}
+
+.contact__button{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    background-color:  var(--color-de-boton);
+    color: var(--color-de-fondo2);
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 18px ;
+    border: none;
 
 }
 
-/*footeer*/
+.contact__button:hover{
+    background-color: var(--color-de-fondo2) ;
+    border: solid var(--color-de-boton) 1px;
+    color: var(--color-de-boton);
+}
+
+/*footer*/
 
 section.footer{
-    height: 20vh;
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.footer__social{
+    margin-top: auto;
+}
+
+.footer__social a{
+    margin: 1rem;
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
