@@ -273,14 +273,26 @@
                     </div>
                     <div class="contact__text">
                         <h2 class="contact__title">Contacto</h2>
-                        <h3 class="contact__subtext">¿Hablamos?</h3>
-                        <h3 class="contact__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
-                        <form class="contact__form" name="form">
-                            <input class="contact__input" type="text" name="nombre" placeholder="Nombre">
-                            <input class="contact__input" type="email" name="email" placeholder="E-mail">
-                            <input class="contact__input" type="text" name="asunto" placeholder="Asunto">
-                            <textarea class="contact__textarea" rows="7"  cols="40" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
-                            <button type="submit" class="contact__button">Enviar mensaje</button>
+                        <h4 class="contact__subtitle">Complete el formulario y me pondré en contacto con usted lo antes posible. </h>
+                        <form class="contact__form" name="form" id="form">
+                            <div class="contact__input-container" >
+                                <input class="contact__input" type="text"  name="nombre" placeholder="Nombre" id="name-container">
+                                <span class="contact__input-message" id="name">Ingrese un nombre válido por favor.</span>
+                            </div>
+                            <div class="contact__input-container" >
+                                <input class="contact__input" type="email"  name="email" placeholder="E-mail" id="email-container">
+                                <span class="contact__input-message" id="email">El email ingresado no es válido, por ej.: juan@mail.com</span>
+                            </div>
+                            <div class="contact__input-container" >
+                                <input class="contact__input" type="text"  name="asunto" placeholder="Asunto" id="subject-container">
+                                <span class="contact__input-message" id="subject">Ingrese un asunto válido por favor.</span>
+                            </div>
+                            <div class="contact__input-container" >
+                                <textarea class="contact__textarea" rows="7"  cols="40" name="mensaje" placeholder="Mensaje" id="message-container"></textarea>
+                                <span class="contact__input-message" id="message">Ingrese su mensaje correctamente por favor.</span>
+                            </div>
+                            <button type="submit" class="contact__button" >Enviar mensaje</button>
+                            <span class="contact__input-message" id="message-success">Su mensaje fue enviado correctamente, muchas gracias!</span>
                         </form>
                     </div>
                 </div>

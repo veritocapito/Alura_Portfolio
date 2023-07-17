@@ -4,17 +4,23 @@
     --color-de-boton: #2A7AE4;
     --color-de-seccion: #F9B17D;
     --color-de-fondo2: #cee5fffd;
+    --color-de-alerta: #ce0000;
+    --color-de-exito: #1ca00d;
+}
+
+* {
+    scroll-behavior: smooth;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--color-de-fondo);
-    font-family: 'Raleway';
     margin: 0;
     padding: 0;
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway';
     line-height: 1;
-    scroll-behavior: smooth;
 }
+
 ol, ul,li {
     list-style: none;
 }
@@ -96,7 +102,7 @@ section.title{
 }
 
 
-.hobbies__title, .skills__title, .academic__title, .experience__section__title, .contact__title{
+.hobbies__title, .skills__title, .academic__title, .experience__section__title{
     font-size: 2rem;
     padding: 2rem;
 }
@@ -108,6 +114,7 @@ section.about{
     min-height: 40vh;
     margin: 1rem 9rem;
     vertical-align: middle ;
+    -ms-text-justify: balance;
 }
 
 /*Sección Hobbies - Skills*/
@@ -261,7 +268,7 @@ section.experience{
 
 section.contact{
     background-color: var(--color-de-fondo2) ;
-    height: 110vh;
+    height: 130vh;
     padding-top: 5rem;
 }
 
@@ -270,6 +277,7 @@ section.contact{
     padding: 2rem;
     justify-content: center;
     align-items: flex-start;
+    font-family: 'Raleway';
 }
 
 .contact__left{
@@ -292,10 +300,11 @@ section.contact{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .contact__title{
-    padding: 0;
+    font-size: 2rem;
 }
 
 .contact__input{
@@ -303,10 +312,16 @@ section.contact{
     height: 45px;
     outline-style: none;
     border-radius: 5px;
+    width: 100%;
 }
 
-.contact__input::placeholder{
-    font-family: 'Raleway';
+.contact__input:not(:placeholder-shown),
+.contact__input:focus,
+.contact__textarea:not(:placeholder-shown),
+.contact__textarea:focus {
+    font-size: 1rem;
+    top: 0.25rem;
+    transition: all 0.25s;
 }
 
 .contact__textarea {
@@ -315,12 +330,50 @@ section.contact{
     outline-style: none;
     border-bottom: var(--color-de-boton) ;
     border-radius: 5px;
+    width: 100%;
+    padding-top: 0.25rem;
 }
 
 .contact__textarea::placeholder{
     font-family: 'Raleway';
     padding-top: 10px;
 }
+
+/* .contact__input-container--invalid {
+    margin-bottom: 0.5rem;
+} */
+
+.contact__input-container--invalid {
+    border: 1px solid var(--color-de-alerta);
+    border-radius: 7px;
+}
+
+.contact__input-container--invalid {
+    color: var(--color-de-alerta);
+}
+
+.contact__input-message {
+    display: none;
+}
+
+.contact__input-container--invalid {
+    color: var(--color-de-alerta);
+    display: block;
+}
+
+.contact__input-message-error{
+    color: var(--color-de-alerta);
+    display: block;
+    padding: 0.5rem;
+}
+
+.contact__input-message-success{
+    color: var(--color-de-exito);
+    display: block;
+    padding: 0.5rem;
+}
+
+
 
 .contact__button{
     display: inline-block;
@@ -358,8 +411,6 @@ section.footer{
     margin: 1rem;
 }
 
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
