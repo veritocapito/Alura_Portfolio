@@ -621,8 +621,9 @@ section.footer{
     }
 
     .title__bio{
-        font-size: 32px;
+        font-size: 26px;
         width: 100%;
+        text-align: center;
     }
 
     .title__subsection{
@@ -651,7 +652,7 @@ section.footer{
     /*Sección Hobbies - Skills*/
 
     section.hobbies, section.skills{
-        min-height: 220vmin;
+        min-height: 150vh;
     }
 
     .hobbies__line, .skills__line{
