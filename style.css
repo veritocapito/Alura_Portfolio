@@ -412,6 +412,8 @@ section.contact{
     color: var(--color-de-alerta);
     display: block;
     padding: 0.5rem;
+    font-size: 12px;
+    text-align: left;
 }
 
 .contact__input-message-success{
@@ -560,6 +562,8 @@ section.footer{
         margin: 0 auto;
     }
 
+    /*Footer*/
+
     section.footer{
         min-height: 20vh;
     }
@@ -574,12 +578,22 @@ section.footer{
         position: static;
     }
 
+    img.logo{
+        display: none;
+    }
+
+    .menu__title{
+        font-size: 20px;
+    }
+
     .menu__list__item{
         display: none;
     }
 
     .show{
         display: block;
+        margin: 0;
+        padding: 0;
     }
 
 
@@ -645,7 +659,7 @@ section.footer{
     }
 
     .hobbies__list, .skills__list{
-        width: 180px;
+        width: 140px;
     }
 
     .hobbies__img img, .skills__img img{
@@ -655,7 +669,7 @@ section.footer{
     /*Formación Académica*/
 
     section.academic{
-        height: 220vh;
+        height: 240vh;
     }
     .academic__courses{
         flex-wrap: wrap;
@@ -665,7 +679,6 @@ section.footer{
 
     section.experience{
         height: 500vh;
-
     }
 
     .experience__img{
@@ -699,9 +712,12 @@ section.footer{
 
     /*Contacto*/
 
+    section.contact{
+        height: 120vh;
+    }
+
     .contact__form{
         align-items: center;
-
     }
 
     .contact__left{
@@ -718,7 +734,7 @@ section.footer{
     }
 
     section.footer{
-        height: 20vh;
+        height: 10vh;
     }
 
 }
