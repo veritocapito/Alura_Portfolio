@@ -238,13 +238,19 @@ section.experience{
     padding: 4% 10%;
     flex-direction: row-reverse;
     text-align: right;
-
 }
+
+
 
 .experience__img{
     max-width: 600px;
     border-radius: 5px;
     border: var(--color-de-boton) solid 1px;
+    
+}
+
+.experience__img:hover{
+    animation: zoom-img 2s ease-in-out normal;
 }
 
 .experience__description{
@@ -285,6 +291,18 @@ section.experience{
 .experience__button-web:hover{
     background-color: #237ff8ea;
     color: var(--color-de-fondo2) ;
+}
+
+@keyframes zoom-img {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 /*Contacto*/
@@ -612,13 +630,14 @@ section.footer{
     /*Sección About*/
 
     section.about{
-        width: 80vw;
+        width: 70vw;
+        margin: 0 auto;
     }
 
     /*Sección Hobbies - Skills*/
 
     section.hobbies, section.skills{
-        min-height: 250vmin;
+        min-height: 220vmin;
     }
 
     .hobbies__line, .skills__line{
@@ -626,13 +645,17 @@ section.footer{
     }
 
     .hobbies__list, .skills__list{
-        width: 140px;
+        width: 180px;
+    }
+
+    .hobbies__img img, .skills__img img{
+        width: 80px;
     }
 
     /*Formación Académica*/
 
     section.academic{
-        height: 250vh;
+        height: 220vh;
     }
     .academic__courses{
         flex-wrap: wrap;
@@ -661,6 +684,17 @@ section.footer{
         text-align: center;
     }
 
+    @keyframes zoom-img {
+        0% {
+            transform: scale(1, 1);
+        }
+        50% {
+            transform: scale(1.05, 1.05);
+        }
+        100% {
+            transform: scale(1, 1);
+        }
+    }
 
 
     /*Contacto*/
@@ -675,7 +709,7 @@ section.footer{
     }
 
     .contact__text{
-        width: 100%;
+        width: 80%;
         text-align: center;
     }
 
@@ -683,5 +717,8 @@ section.footer{
         margin: 0 auto;
     }
 
+    section.footer{
+        height: 20vh;
+    }
 
 }
