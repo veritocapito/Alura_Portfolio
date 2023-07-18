@@ -72,15 +72,19 @@ section.title{
     display: flex;
     height: 100vh;
     justify-content:center;
-    align-content: center;
+    align-items: center;
 }
 
 .title__div{
     width: 80vw;
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items: center;
     flex-direction: row-reverse;
+}
+
+.title__container{
+    width: 60%;
 }
 
 .title__profile{
@@ -155,7 +159,7 @@ section.hobbies, section.skills{
     background-color:var(--color-de-seccion);
     display: flex;
     flex-direction: column;
-    min-width: 200px;
+    width: 200px;
     height: 200px;
     align-items: center;
     justify-content: space-evenly;
@@ -205,17 +209,19 @@ section.academic{
 /* experiencia*/
 
 section.experience{
+    display: flex;
+    flex-direction: column;
+    height: 400vh;
     text-align: center;
-    margin: 0 auto;
-    padding-top: 5rem;
+    padding: 5% 0;
+
 }
 
 .experience__box{
     display: flex;
     justify-content: center;
-    gap: 3rem;
-    margin: 5rem;
-    padding-left: 3rem;
+    gap: 3.5rem;
+    padding: 4% 10%;
     text-align: left;
 }
 
@@ -227,11 +233,11 @@ section.experience{
 .experience__box__reverse{
     display: flex;
     justify-content: center;
-    gap: 3rem;
-    margin: 5rem;
+    gap: 3.5rem;
+    padding: 4% 10%;
     flex-direction: row-reverse;
-    padding-right: 3rem;
     text-align: right;
+
 }
 
 .experience__img{
@@ -243,6 +249,8 @@ section.experience{
 .experience__description{
     display: inline-flex;
     gap: 1rem;
+    margin-bottom: 2rem;
+
 }
 
 .experience__button-repo{
@@ -284,13 +292,14 @@ section.contact{
     background-color: var(--color-de-fondo2) ;
     height: 110vh;
     padding-top: 5rem;
+    width: 100vw;
 }
 
 .contact__box{
     display: flex;
     padding: 2rem;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     font-family: 'Raleway';
 }
 
@@ -305,17 +314,22 @@ section.contact{
 }
 
 .contact__text{
-    width: 50%;
-    margin: 1rem 2rem;
     text-align: left;
+    width: 60%;
+}
+
+.contact__inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .contact__form{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 1.5rem;
     margin: 1.5rem 0;
-    width: 80%;
 }
 
 .contact__title{
@@ -323,6 +337,7 @@ section.contact{
 }
 
 .contact__input{
+    align-self: flex-start;
     border: none;
     height: 45px;
     outline-style: none;
@@ -442,6 +457,10 @@ section.footer{
 
     /*title*/
 
+    .title{
+        height: 60vh;
+    }
+
     .title__div{
         justify-content: space-between;
     }
@@ -520,28 +539,144 @@ section.footer{
         margin: 0 auto;
     }
 
-
+    section.footer{
+        min-height: 20vh;
+    }
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
 
-/*Menu*/
+    /* Menú */
 
-/*Titulo*/
+    section.menu{
+        position: static;
+    }
 
-/*Sección sobre mi*/
+    .menu__list__item{
+        display: none;
+    }
 
-/*Skills*/
+    .show{
+        display: block;
+    }
 
-/*Hobbies*/
 
-/*Formación Académica*/
+    /*title*/
 
-/*Experiencia Profesional*/
+    .title{
+        width: 80vw;
+        margin: 0 auto;
+    }
 
-/*Contacto*/
+    .title__div{
+        flex-direction: column;
+    }
 
-/*Footer*/
+    .title__profile{
+        position: relative;
+        bottom: 30px;
+        width: 40vw;
+    }
+
+    .title__container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title__bio{
+        font-size: 32px;
+        width: 100%;
+    }
+
+    .title__subsection{
+        font-size: 16px;
+    }
+
+    .title__network{
+        gap: 0;
+    }
+    .title__network__item a {
+        font-size: 14px;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /*Sección About*/
+
+    section.about{
+        width: 80vw;
+    }
+
+    /*Sección Hobbies - Skills*/
+
+    section.hobbies, section.skills{
+        min-height: 130vh;
+    }
+
+    .hobbies__line, .skills__line{
+        flex-wrap: wrap;
+    }
+
+    .hobbies__list, .skills__list{
+        width: 180px;
+    }
+
+    /*Formación Académica*/
+
+    section.academic{
+        height: 220vh;
+    }
+    .academic__courses{
+        flex-wrap: wrap;
+    }
+
+    /*Experiencia Profesional*/
+
+    section.experience{
+        height: 500vh;
+
+    }
+
+    .experience__img{
+        max-width: 90vw;
+    }
+
+    .experience__info-container{
+        width: 90vw;
+        align-self: center;
+    }
+
+    .experience__box, .experience__box__reverse{
+        margin: 2rem 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+
+    /*Contacto*/
+
+    .contact__form{
+        align-items: center;
+    }
+
+    .contact__left{
+        display: none;
+    }
+
+    .contact__text{
+        width: 70%;
+    }
+
+    .contact__button{
+        margin: 0 auto;
+    }
+
 
 }

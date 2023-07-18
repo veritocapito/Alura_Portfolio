@@ -26,7 +26,7 @@
                         <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
                         <li class="menu__list__item"><a href="#formacion">Formación</a></li>
                         <li class="menu__list__item"><a href="#xp">Proyectos</a></li>
-                        <li class="menu__list__item"><a href="#contacto">Contacto</a></li>
+                        <li class="menu__list__item show"><a href="#contacto">Contacto</a></li>
                     </ul>
                     <!-- <li class="menu__list__item__contato"><a href="#contacto">contacto@fulana.com</a></li> -->
                 </nav>
@@ -56,7 +56,7 @@
             <div class="about__container">
                 <h3 class="about__title">Sobre mi</h3>
                 <p class="about__paragraph">
-                    Desde 2020 complementando mi carrera de profesional contable con la programación web. Responsable, comprometida y determinada. Creo en la capacitación constante y los nuevos desafíos. Trabaje en proyectos con HTML, CSS, Javascript, Angular, Java, SpringBoot. 
+                    Desde 2020 complementando mi carrera de profesional contable con la programación web. Responsable, comprometida y determinada. Creo en la capacitación constante y los nuevos desafíos. Desarrolle diversos proyectos con HTML, CSS, Javascript, Angular, React, Java, SpringBoot. 
                 </p>
                 <p class="about__paragraph">En mi trayectoria laboral he asumido altos niveles de responsabilidad y adquirido habilidades interpersonales. Aporte valor en la implementación de sistemas informáticos y soluciones tecnológicas.
                 </p>
@@ -271,11 +271,14 @@
                     <div class="contact__left">
                         <img class="contact__img" src="./assets/contact.jpg">
                     </div>
-                    <div class="contact__text">
-                        <h2 class="contact__title">Contacto</h2>
-                        <h4 class="contact__subtitle">Complete el formulario y me pondré en contacto con usted lo antes posible. </h>
-                        <form class="contact__form" name="form" id="form">
-                            <div class="contact__input-container" >
+
+                    <form class="contact__form" name="form" id="form">
+                        <div class="contact__text">
+                            <h2 class="contact__title">Contacto</h2>
+                            <h4 class="contact__subtitle">Complete el formulario y me pondré en contacto con usted lo antes posible.</h4>
+                        </div>
+                        <div class="contact__inputs">
+                            <div class="contact__input-container">
                                 <input class="contact__input" type="text"  name="nombre" placeholder="Nombre" id="name-container">
                                 <span class="contact__input-message" id="name">Ingrese un nombre válido por favor.</span>
                             </div>
@@ -291,10 +294,10 @@
                                 <textarea class="contact__textarea" rows="7"  cols="40" name="mensaje" placeholder="Mensaje" id="message-container"></textarea>
                                 <span class="contact__input-message" id="message">Ingrese su mensaje correctamente por favor.</span>
                             </div>
-                            <button type="submit" class="contact__button" >Enviar mensaje</button>
-                            <span class="contact__input-message" id="message-success">Su mensaje fue enviado correctamente, muchas gracias!</span>
-                        </form>
-                    </div>
+                        </div>
+                        <button type="submit" class="contact__button" >Enviar mensaje</button>
+                        <span class="contact__input-message" id="message-success">Su mensaje fue enviado correctamente, muchas gracias!</span>
+                    </form>
                 </div>
             </section>
     
