@@ -19,6 +19,7 @@ body {
     background-color: var(--color-de-fondo);
     font-family: 'Raleway';
     line-height: 1;
+    overflow-x: hidden;
 }
 
 ol, ul,li {
@@ -293,7 +294,9 @@ section.contact{
     height: 110vh;
     padding-top: 5rem;
     width: 100vw;
+
 }
+
 
 .contact__box{
     display: flex;
@@ -422,7 +425,7 @@ section.contact{
 
 section.footer{
     display: flex;
-    height: 30vh;
+    min-height: 30vh;
     justify-content: center;
     padding-bottom: 1rem;
 }
@@ -545,7 +548,7 @@ section.footer{
 }
 
 /*Mobile*/
-@media screen and (min-width: 425px) and (max-width: 767px) {
+@media screen and (min-width: 375px) and (max-width: 767px) {
 
     /* Menú */
 
@@ -615,7 +618,7 @@ section.footer{
     /*Sección Hobbies - Skills*/
 
     section.hobbies, section.skills{
-        min-height: 130vh;
+        min-height: 250vmin;
     }
 
     .hobbies__line, .skills__line{
@@ -623,13 +626,13 @@ section.footer{
     }
 
     .hobbies__list, .skills__list{
-        width: 180px;
+        width: 140px;
     }
 
     /*Formación Académica*/
 
     section.academic{
-        height: 220vh;
+        height: 250vh;
     }
     .academic__courses{
         flex-wrap: wrap;
@@ -664,6 +667,7 @@ section.footer{
 
     .contact__form{
         align-items: center;
+
     }
 
     .contact__left{
@@ -671,7 +675,8 @@ section.footer{
     }
 
     .contact__text{
-        width: 70%;
+        width: 100%;
+        text-align: center;
     }
 
     .contact__button{
